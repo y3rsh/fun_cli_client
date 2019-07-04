@@ -4,6 +4,7 @@
 
 ## Setup
 
+1. clone the repo
 1. Have Python 3
     - pyenv suggested
 1. Have latest pip
@@ -15,26 +16,26 @@
     - To activate this project's virtualenv, run `pipenv shell`
     - Run a command inside the virtualenv with `pipenv run`
 
-## linting and formatting
+## Linting and Formatting
 
 ```shell
 pipenv run invoke black
 pipenv run flake8
 ```
 
-## run the code
+## Run the code
 
 ```shell
 pipenv run python find_country.py
 ```
 
-## run the tests
+## Run the tests
 
 ```shell
 pipenv run pytest
 ```
 
-## Things not addressed
+## Some things not addressed
 
 - the set of special characters to reject is not completely vetted
 - I am not preventing emoji input
