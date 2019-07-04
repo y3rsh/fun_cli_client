@@ -15,16 +15,22 @@
 
 ## linting and formatting
 
-`pipenv run invoke black`
-`pipenv run flake8`
+```shell
+pipenv run invoke black
+pipenv run flake8
+```
 
 ## run the code
 
-`pipenv run python find_country.py`
+```shell
+pipenv run python find_country.py
+```
 
 ## run the tests
 
-`pipenv run pytest`
+```shell
+pipenv run pytest
+```
 
 ## Things not addressed
 
