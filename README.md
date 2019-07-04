@@ -1,4 +1,6 @@
-# find country
+# Find Country
+
+> uses https://restcountries.eu/#similar-projects to resolve a country name or code
 
 ## Setup
 
