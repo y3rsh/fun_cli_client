@@ -16,4 +16,3 @@ class CountryClient:
     def get_by_code(self, code: str):
         endpoint = f"{self.base_url}/alpha/{code}"
         return self.session.get(endpoint, timeout=5)
-✨
