@@ -12,9 +12,11 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: what to point at?
-      run: ls -al /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7
-    - name: alias?
-      run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 --version
     - name: upgrade pip
       run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pip install --upgrade pip
+    - name: install pipenv
+      run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pip install pipenv
+    - name: install dependencies
+      run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pipenv install -d
+    - name: run tests
+      run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pytest
