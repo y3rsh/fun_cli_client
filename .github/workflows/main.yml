@@ -13,8 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: what to point at?
-      run: alias python374='/opt/hostedtoolcache/Python/3.7.4/x64/lib/python3.7'
-    - name: alias?
-      run: python374 --version
-    - name: upgrade pip
-      run: python374 -m pip install --upgrade pip
+      run: ls -al /opt/hostedtoolcache/Python/3.7.4/x64/lib/python3.7
+    #- name: alias?
+    #  run: python374 --version
+    #- name: upgrade pip
+    #  run: python374 -m pip install --upgrade pip
