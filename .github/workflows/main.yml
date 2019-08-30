@@ -16,7 +16,10 @@ jobs:
       run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pip install --upgrade pip
     - name: install pipenv
       run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pip install pipenv
+    - name: set pipenv python
+      run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pipenv --python /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7
     - name: install dependencies
-      run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pipenv install -d
+      run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pipenv install -d --system
     - name: run tests
       run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pytest
+    
