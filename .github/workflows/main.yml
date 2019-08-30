@@ -12,5 +12,5 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: find pythons
-      run: find / -type f -executable -iname "python*" -exec file -i "{}" \;
+    - name: what to point at?
+      run: ls -al /opt/hostedtoolcache/Python/3.7.4
