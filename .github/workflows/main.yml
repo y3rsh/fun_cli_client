@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: what to point at?
-      run: ls -al /opt/hostedtoolcache/Python/3.7.4/x64/lib/python3.7
+      run: ls -al /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7
     #- name: alias?
     #  run: python374 --version
     #- name: upgrade pip
