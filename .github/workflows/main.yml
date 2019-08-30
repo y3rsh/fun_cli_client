@@ -12,9 +12,5 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: python3 version
-      run: python3 --version
-    - name: where am I?
-      run: ls -al
-    - name: where python?
-      run: ls /usr/bin/python*
+    - name: pyenv
+      run: pyenv --help
