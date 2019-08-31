@@ -11,6 +11,7 @@ black = "==19.3b0"
 flake8 = "*"
 invoke = "*"
 requests = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.7"

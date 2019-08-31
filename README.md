@@ -35,6 +35,14 @@ pipenv run python find_country.py
 pipenv run pytest
 ```
 
+## Create requirements.txt
+
+> I want to use pipenv to dev locally and keep dependencies up to date using update command.  BUT I want to use pip to install on CI because it is much faster than pipenv.
+
+```shell
+pipenv run invoke make-req
+```
+
 ## Some things not addressed
 
 - the set of special characters to reject is not completely vetted

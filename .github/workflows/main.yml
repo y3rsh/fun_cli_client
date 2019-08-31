@@ -1,20 +1,25 @@
-name: CI
+name: 
 
-on: 
+on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
-  build:
-
+  run:
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/checkout@v1
-    - name: upgrade pip
-      run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pip install --upgrade pip
-    - name: install pipenv
-      run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pip install -r requirements.txt
-    - name: run tests
-      run: /opt/hostedtoolcache/Python/3.7.4/x64/bin/python3.7 -m pytest
+      - uses: actions/checkout@master
+      - name: Setup Python
+        uses: actions/setup-python@master
+        with:
+          version: 3.7.4
+      - name: Run all tests.
+        run: |
+          pip install -r requirements.txt
+          pytest
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1.0.2
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}
+          file: ./coverage.xml
