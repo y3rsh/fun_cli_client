@@ -1,5 +1,9 @@
 # Find Country
 
+[![codecov](https://codecov.io/gh/y3rsh/fun_cli_client/branch/master/graph/badge.svg)](https://codecov.io/gh/y3rsh/fun_cli_client)
+
+## About
+
 > uses https://restcountries.eu/#similar-projects to resolve a country name or code
 
 ## Setup
